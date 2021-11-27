@@ -12,8 +12,9 @@ get: ^4.3.8
        ref: master
        
  syncfusion_flutter_charts: ^19.3.54.
- ![image](https://user-images.githubusercontent.com/42210628/143667468-3599ca71-126b-489f-85bb-cd7d2e7d3c17.png)
- ![image](https://user-images.githubusercontent.com/42210628/143667460-ae24c631-dabc-46f5-9d36-54bb519e71cb.png)
+ 
+![image](https://user-images.githubusercontent.com/42210628/143667468-3599ca71-126b-489f-85bb-cd7d2e7d3c17.png)
+![image](https://user-images.githubusercontent.com/42210628/143667460-ae24c631-dabc-46f5-9d36-54bb519e71cb.png)
 ![image](https://user-images.githubusercontent.com/42210628/143667473-4665f22a-8072-42f5-9959-46cdfe4ba053.png)
 ![image](https://user-images.githubusercontent.com/42210628/143667509-0ab8c1dc-60d8-4109-bf99-ce9f6dc92be5.png)
 
