@@ -647,79 +647,62 @@ class _ConectadoState extends State<Conectado> {
                         )),
                     primaryXAxis: CategoryAxis(),
                     series: <ChartSeries>[
-                      LineSeries<SalesData, String>(
+                      LineSeries<Readings, String>(
                           dataSource: [
                             // Bind data source
 
-                            SalesData(leitura.length - 20,
+                            Readings(leitura.length - 20,
                                 leitura[leitura.length - 20]),
-                            SalesData(leitura.length - 19,
+                            Readings(leitura.length - 19,
                                 leitura[leitura.length - 19]),
-                            SalesData(leitura.length - 18,
+                            Readings(leitura.length - 18,
                                 leitura[leitura.length - 18]),
-                            SalesData(leitura.length - 17,
+                            Readings(leitura.length - 17,
                                 leitura[leitura.length - 17]),
-                            SalesData(leitura.length - 16,
+                            Readings(leitura.length - 16,
                                 leitura[leitura.length - 16]),
-                            SalesData(leitura.length - 15,
+                            Readings(leitura.length - 15,
                                 leitura[leitura.length - 15]),
-                            SalesData(leitura.length - 14,
+                            Readings(leitura.length - 14,
                                 leitura[leitura.length - 14]),
-                            SalesData(leitura.length - 13,
+                            Readings(leitura.length - 13,
                                 leitura[leitura.length - 13]),
-                            SalesData(leitura.length - 12,
+                            Readings(leitura.length - 12,
                                 leitura[leitura.length - 12]),
-                            SalesData(leitura.length - 11,
+                            Readings(leitura.length - 11,
                                 leitura[leitura.length - 11]),
-                            SalesData(leitura.length - 10,
+                            Readings(leitura.length - 10,
                                 leitura[leitura.length - 10]),
-                            SalesData(leitura.length - 9,
+                            Readings(leitura.length - 9,
                                 leitura[leitura.length - 9]),
-                            SalesData(leitura.length - 8,
+                            Readings(leitura.length - 8,
                                 leitura[leitura.length - 8]),
-                            SalesData(leitura.length - 7,
+                            Readings(leitura.length - 7,
                                 leitura[leitura.length - 7]),
-                            SalesData(leitura.length - 6,
+                            Readings(leitura.length - 6,
                                 leitura[leitura.length - 6]),
-                            SalesData(leitura.length - 5,
+                            Readings(leitura.length - 5,
                                 leitura[leitura.length - 5]),
-                            SalesData(leitura.length - 4,
+                            Readings(leitura.length - 4,
                                 leitura[leitura.length - 4]),
-                            SalesData(leitura.length - 3,
+                            Readings(leitura.length - 3,
                                 leitura[leitura.length - 3]),
-                            SalesData(leitura.length - 2,
+                            Readings(leitura.length - 2,
                                 leitura[leitura.length - 2]),
-                            SalesData(leitura.length - 1,
+                            Readings(leitura.length - 1,
                                 leitura[leitura.length - 1]),
 
-                            SalesData(leitura.length, leitura.last),
+                            Readings(leitura.length, leitura.last),
                           ],
-                          xValueMapper: (SalesData sales, _) =>
+                          xValueMapper: (Readings sales, _) =>
                               sales.year.toString(),
-                          yValueMapper: (SalesData sales, _) => sales.sales)
+                          yValueMapper: (Readings sales, _) => sales.sales)
                     ]),
               ),
-              Text(leitura.last.toString(),
-                  style: TextStyle(
+              Text("Last Value:" + leitura.last.toString(),
+                  style: const TextStyle(
                     fontSize: 20,
                   )),
-              ElevatedButton(
-                  onPressed: () {
-                    setState(() {
-                      voltage;
-                      ;
-                    });
-                  },
-                  child: Text('ola')),
-
-              /* Enable or disable latch. If latch is enabled the alert pin will assert until the
-   * conversion register is read (getResult functions). If disabled the alert pin assertion
-   * will be cleared with next value within limits. 
-   *  
-   *  ADS1115_LATCH_DISABLED (default)
-   *  ADS1115_LATCH_ENABLED
-   * value8
-   */
               ...todos.map(
                 (todos) => Funcoes(
                   nomedafuncao: todos.nomedafuncao,

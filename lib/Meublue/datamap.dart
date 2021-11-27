@@ -6,9 +6,6 @@ class Todo {
 }
 
 final List<Todo> todos = [
-  Todo(
-      nomedafuncao: "nova função",
-      argdafuncao: <String>['opção 1', 'opção 2', 'opção 3', 'opção 4']),
   Todo(nomedafuncao: "setVoltageRange_mV", argdafuncao: <String>[
     '256 mv',
     '512 mv',

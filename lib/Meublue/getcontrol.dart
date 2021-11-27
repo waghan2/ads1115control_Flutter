@@ -1,12 +1,8 @@
-import 'dart:convert';
-import 'dart:typed_data';
-
 import 'package:flutter_bluetooth_serial/flutter_bluetooth_serial.dart';
 import 'package:get/get.dart';
-import 'package:flutter/material.dart';
 
-class SalesData {
-  SalesData(this.year, this.sales);
+class Readings {
+  Readings(this.year, this.sales);
   final int year;
   final double? sales;
 }
