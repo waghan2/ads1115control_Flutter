@@ -4,14 +4,9 @@ Welcome advanture, this app is an copy of <ADS1115_WE.h> lib fo ESP-32 implement
 
 ## dependencies
 
-get: ^4.3.8
-  flutter_bluetooth_serial: ^0.4.0
-  another_carousel_pro: // well, this one is up to you... just to have a little fun 🐿️
-     git:
-       url: https://github.com/iamnabink/another_carousel_pro.git
-       ref: master
-       
- syncfusion_flutter_charts: ^19.3.54.
+#flutter_bluetooth_serial: ^0.4.0
+#another_carousel_pro: // well, this one is up to you... just to have a little fun 🐿️
+#syncfusion_flutter_charts: ^19.3.54.
  
 ![image](https://user-images.githubusercontent.com/42210628/143667468-3599ca71-126b-489f-85bb-cd7d2e7d3c17.png)
 ![image](https://user-images.githubusercontent.com/42210628/143667460-ae24c631-dabc-46f5-9d36-54bb519e71cb.png)
