@@ -1,10 +1,12 @@
 
 
 # Welcome advanture, this app is an copy of <ADS1115_WE.h> lib for ESP-32 implemented on flutter.  
-What to do
-### Implement IOS code, actualy I could not test on Iphone. Implement WebApplication. Implement TODO new Functions, this is an idea to make a TODO so you can implement a new function with yours argumments. 
-###I
-## Ads1115 
+### What to do
+#### Implement IOS code, actualy I could not test on Iphone. 
+#### Implement WebApplication. 
+#### Implement TODO new Functions, this is an idea to make a TODO so you can implement a new function with yours argumments. 
+###
+ 
 ## dependencies
 
 ### flutter_bluetooth_serial: ^0.4.0
