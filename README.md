@@ -1,7 +1,9 @@
-# ads1115control
 
-Welcome advanture, this app is an copy of <ADS1115_WE.h> lib fo ESP-32 implemented on flutter. 
 
+# Welcome advanture, this app is an copy of <ADS1115_WE.h> lib fo ESP-32 implemented on flutter.  
+## Ads1115
+### Esp-32
+#### Flutter
 ## dependencies
 
 ### flutter_bluetooth_serial: ^0.4.0
