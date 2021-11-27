@@ -1,11 +1,12 @@
 
 
 # Welcome advanture, this app is an copy of <ADS1115_WE.h> lib for ESP-32 implemented on flutter.  
-### What to do
+### How can you help?
+#### Implemento it with BLE -
 #### Implement IOS code, actualy I could not test on Iphone. 
 #### Implement WebApplication. 
 #### Implement TODO new Functions, this is an idea to make a TODO so you can implement a new function with yours argumments. 
-###
+### The ESP Code is not good yet, Im working on it, will be ready very soon.
  
 ## dependencies
 
