@@ -28,7 +28,7 @@ class _MeuBlueState extends State<MeuBlue> {
     super.initState();
 
     _getBTConnection();
-    _timer = RestartableTimer(Duration(seconds: 1), _drawImage);
+    _timer = RestartableTimer(const Duration(seconds: 1), _drawImage);
   }
 
   @override
@@ -94,7 +94,7 @@ class _MeuBlueState extends State<MeuBlue> {
   }
 
   void _sendMessage(String text) async {
-    text = 'enviando mensagem'.trim();
+    text = 'TEST MSG'.trim();
     if (text.isNotEmpty) {
       try {
         connection.output.add(ascii.encode(text));
@@ -111,16 +111,16 @@ class _MeuBlueState extends State<MeuBlue> {
     return Scaffold(
       appBar: AppBar(
         centerTitle: true,
-        title: const Text('meu blue'),
+        title: const Text('ADS CONTROL'),
       ),
       body: Center(
         child: Column(
           children: [
             ElevatedButton(
                 onPressed: () {
-                  _sendMessage('Enviando daqui');
+                  _sendMessage('TEST MSG');
                 },
-                child: const Text('Envair'))
+                child: const Text('SEND MSG')),
           ],
         ),
       ),

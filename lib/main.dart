@@ -11,7 +11,7 @@ void main() {
     home: Home(),
     getPages: [
       GetPage(name: '/home', page: () => Home()),
-      GetPage(name: '/Conectar', page: () => MyApp()),
+      GetPage(name: '/Connect', page: () => MyApp()),
     ],
   ));
 }
@@ -30,7 +30,7 @@ class _HomeState extends State<Home> {
       child: Scaffold(
         appBar: AppBar(
           backgroundColor: const Color(0xFF410000),
-          title: const Text('Ads1115 Control by Esp32S'),
+          title: const Text('Ads1115 Control - Esp32S'),
         ),
         body: SingleChildScrollView(
           child: Column(
@@ -50,27 +50,9 @@ class _HomeState extends State<Home> {
               Center(
                   child: IconButton(
                       onPressed: () {
-                        Get.toNamed('/Conectar');
+                        Get.toNamed('/Connect');
                       },
                       icon: const Icon(Icons.search))),
-              Center(
-                  child: IconButton(
-                      onPressed: () {
-                        Get.toNamed('/Conectado');
-                      },
-                      icon: const Icon(Icons.home))),
-              Center(
-                  child: IconButton(
-                      onPressed: () {
-                        Get.toNamed('/todo');
-                      },
-                      icon: const Icon(Icons.list))),
-              ...todos.map(
-                (todos) => Funcoes(
-                  nomedafuncao: todos.Function,
-                  argumento: todos.argfunction,
-                ),
-              ),
             ],
           ),
         ),

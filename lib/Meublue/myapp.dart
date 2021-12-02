@@ -79,7 +79,7 @@ class _HomePageState extends State<HomePage> with WidgetsBindingObserver {
       } else {
         devices.clear();
       }
-      print("Estado ativo: ${state.isEnabled}");
+      print("Active: ${state.isEnabled}");
       setState(() {});
     });
   }
@@ -126,7 +126,7 @@ class _HomePageState extends State<HomePage> with WidgetsBindingObserver {
         children: <Widget>[
           SwitchListTile(
             activeColor: const Color(0xFF410000),
-            title: const Text('Abilitar Bluetooth'),
+            title: const Text('Turn on Bluetooth'),
             value: _bluetoothState.isEnabled,
             onChanged: (value) {
               {
@@ -143,7 +143,7 @@ class _HomePageState extends State<HomePage> with WidgetsBindingObserver {
             title: const Text("Bluetooth STATUS"),
             subtitle: Text(_bluetoothState.toString()),
             trailing: RaisedButton(
-              child: Text("Configurações"),
+              child: Text("Config"),
               onPressed: () {
                 FlutterBluetoothSerial.instance.openSettings();
               },
@@ -169,7 +169,7 @@ class _HomePageState extends State<HomePage> with WidgetsBindingObserver {
 
   void _startCameraConnect(BuildContext context, BluetoothDevice server) {
     Navigator.of(context).push(MaterialPageRoute(builder: (context) {
-      return Conectado(
+      return Connected(
         device: server,
       );
     }));

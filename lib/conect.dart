@@ -409,15 +409,15 @@ import 'Meublue/getcontrol.dart';
 import 'Meublue/todo.dart';
 
 @override
-class Conectado extends StatefulWidget {
-  Conectado({Key? key, required this.device}) : super(key: key);
+class Connected extends StatefulWidget {
+  Connected({Key? key, required this.device}) : super(key: key);
   BluetoothDevice device;
 
   @override
-  _ConectadoState createState() => _ConectadoState(device: device);
+  _ConnectedState createState() => _ConnectedState(device: device);
 }
 
-class _ConectadoState extends State<Conectado> {
+class _ConnectedState extends State<Connected> {
   late BluetoothConnection connection;
 
   late bool isConnecting;
@@ -448,7 +448,7 @@ class _ConectadoState extends State<Conectado> {
     0.0,
   ];
 
-  _ConectadoState({required this.device});
+  _ConnectedState({required this.device});
   BluetoothDevice device;
   _getBTConnection() {
     BluetoothConnection.toAddress(device.address).then((_connection) {
@@ -459,8 +459,8 @@ class _ConectadoState extends State<Conectado> {
       connection.input?.listen(_onDataReceived).onDone(() {
         if (isDisconnecting) {
           Get.defaultDialog(
-            title: 'Desconectado',
-            content: const Text('Desconectado Localmente'),
+            title: 'disconnected',
+            content: const Text('disonnected!'),
             actions: [
               IconButton(
                 icon: const Icon(Icons.close),
@@ -471,11 +471,9 @@ class _ConectadoState extends State<Conectado> {
             ],
           );
         } else {
-          // print('Desconectado Remotamente');
           Get.defaultDialog(
-            title: 'Desconectado',
-            content: const Text(
-                'Desconectado Remotamente. \nO dispositivo não está respondendo!!!'),
+            title: 'Disonnected',
+            content: const Text('Remotly disconnected!'),
             actions: [
               IconButton(
                 icon: const Icon(Icons.close),
@@ -519,19 +517,8 @@ class _ConectadoState extends State<Conectado> {
     if (data.isNotEmpty) {
       String dataStr = ascii.decode(data);
       message += dataStr;
-      // print('Valor recebido: $dataStr');
-      //chunks.add(data);
+
       setState(() {
-        // voltage
-        // sensibilidade
-        // intermax
-        // intermin
-        // pulso
-        // temp
-        // modop
-        // sfile
-        // lemrst
-        // fim
         if (dataStr.contains('voltage')) {
           voltage = message.replaceAll('voltage', '');
           voltage = voltage.replaceAll('\n', '');
@@ -600,25 +587,13 @@ class _ConectadoState extends State<Conectado> {
           msgj = msg.replaceAll('\n', 'mJ');
           print(msgj);
           var doublemsg = double.parse(msg).toDouble();
-          // print('Meter Value $_meterValue');
-          // print('Temperature value $_temperatureValue');
-          //var intmsg = int.parse(msg);
-          leitura.add(doublemsg);
-          //print('Valores de leitura>>>>>>>>>>>>>>>>>$leitura');
 
-          // print(ascii.encode(msg),);
-          // print(message);
-          // print('data $data');  print('dataStr $dataStr'); // here you get complete string
+          leitura.add(doublemsg);
+
           message = ''; //clear buffer to accept new string
         }
       });
-
-      //print('Data incoming: ${ascii.decode(data)}');
-      //_timer.reset();
     }
-
-    // print(
-    //     "Tamanho do dado recebido: ${data.length}, Numero de leituras: ${chunks.length}");
   }
 
   @override
@@ -695,8 +670,8 @@ class _ConectadoState extends State<Conectado> {
                             Readings(leitura.length, leitura.last),
                           ],
                           xValueMapper: (Readings sales, _) =>
-                              sales.year.toString(),
-                          yValueMapper: (Readings sales, _) => sales.sales)
+                              sales.x.toString(),
+                          yValueMapper: (Readings sales, _) => sales.y)
                     ]),
               ),
               Text("Last Value:" + leitura.last.toString(),
@@ -704,9 +679,9 @@ class _ConectadoState extends State<Conectado> {
                     fontSize: 20,
                   )),
               ...todos.map(
-                (todos) => Funcoes(
-                  nomedafuncao: todos.Function,
-                  argumento: todos.argfunction,
+                (todos) => Functions(
+                  nameFunction: todos.function,
+                  functionArg: todos.argfunction,
                 ),
               ),
             ],
@@ -715,4 +690,10 @@ class _ConectadoState extends State<Conectado> {
       ),
     );
   }
+}
+
+class Readings {
+  Readings(this.x, this.y);
+  final int x;
+  final double? y;
 }

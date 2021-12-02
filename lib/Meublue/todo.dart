@@ -1,20 +1,20 @@
 import 'package:ads1115control/Meublue/getcontrol.dart';
 import 'package:flutter/material.dart';
 
-class Funcoes extends StatefulWidget {
-  String nomedafuncao;
-  List<String> argumento;
-  Funcoes({Key? key, required this.nomedafuncao, required this.argumento})
+class Functions extends StatefulWidget {
+  String nameFunction;
+  List<String> functionArg;
+  Functions({Key? key, required this.nameFunction, required this.functionArg})
       : super(key: key);
 
   @override
-  State<Funcoes> createState() =>
+  State<Functions> createState() =>
       // ignore: no_logic_in_create_state
-      _FuncoesState(nomedafuncao: nomedafuncao, argumento: argumento);
+      _FunctionsState(nomedafuncao: nameFunction, argumento: functionArg);
 }
 
-class _FuncoesState extends State<Funcoes> {
-  _FuncoesState({required this.nomedafuncao, required this.argumento});
+class _FunctionsState extends State<Functions> {
+  _FunctionsState({required this.nomedafuncao, required this.argumento});
 
   late String nomedafuncao;
   List<String> argumento;
@@ -38,7 +38,7 @@ class _FuncoesState extends State<Funcoes> {
             children: [
               Expanded(
                 child: Text(
-                  widget.nomedafuncao,
+                  widget.nameFunction,
                   style: const TextStyle(
                       fontSize: 18, fontWeight: FontWeight.bold),
                   textAlign: TextAlign.left,
@@ -46,7 +46,7 @@ class _FuncoesState extends State<Funcoes> {
               ),
               DropdownButton<String>(
                 dropdownColor: const Color(0xFFFFFFFF),
-                value: widget.argumento[0],
+                value: widget.functionArg[0],
                 icon: const Icon(Icons.arrow_downward),
                 iconSize: 24,
                 elevation: 16,
@@ -60,14 +60,14 @@ class _FuncoesState extends State<Funcoes> {
                     dropdownValue = newValue7!;
                     print(newValue7);
                     setState(() {
-                      print(Controle().leituras.last.toString());
+                      // print(Control().readings.last.toString());
                     });
                     // controle.sendMessage(
                     //   "sensibilidade" + dropdownValue,
                     // );
                   });
                 },
-                items: widget.argumento
+                items: widget.functionArg
                     .map<DropdownMenuItem<String>>((String value7) {
                   return DropdownMenuItem<String>(
                     value: value7,

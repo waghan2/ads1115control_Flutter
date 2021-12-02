@@ -1,12 +1,12 @@
 class Todo {
-  String Function;
+  String function;
   List<String> argfunction;
 
-  Todo({required this.Function, required this.argfunction});
+  Todo({required this.function, required this.argfunction});
 }
 
 final List<Todo> todos = [
-  Todo(Function: "setVoltageRange_mV", argfunction: <String>[
+  Todo(function: "setVoltageRange_mV", argfunction: <String>[
     '256 mv',
     '512 mv',
     '1024 mv',
@@ -14,7 +14,7 @@ final List<Todo> todos = [
     '4096 mv',
     '6144 mv'
   ]),
-  Todo(Function: "ADS1115_RANGE_6144", argfunction: <String>[
+  Todo(function: "ADS1115_RANGE_6144", argfunction: <String>[
     'ADS1115_RANGE_0256',
     'ADS1115_RANGE_0512',
     'ADS1115_RANGE_1024',
@@ -22,7 +22,7 @@ final List<Todo> todos = [
     'ADS1115_RANGE_4096',
     'ADS1115_RANGE_6144',
   ]),
-  Todo(Function: "setCompareChannels", argfunction: <String>[
+  Todo(function: "setCompareChannels", argfunction: <String>[
     'ADS1115_COMP_0_1',
     'ADS1115_COMP_0_3',
     'ADS1115_COMP_1_3',
@@ -32,12 +32,12 @@ final List<Todo> todos = [
     'ADS1115_COMP_2_GND',
     'ADS1115_COMP_3_GND',
   ]),
-  Todo(Function: "setAlertPinMode", argfunction: <String>[
+  Todo(function: "setAlertPinMode", argfunction: <String>[
     'ADS1115_ALERT_HIGH',
     'ADS1115_ALERT_LOW',
     'ADS1115_ALERT_DISABLE',
   ]),
-  Todo(Function: "setConvRate", argfunction: <String>[
+  Todo(function: "setConvRate", argfunction: <String>[
     'ADS1115_CONV_RATE_8',
     'ADS1115_CONV_RATE_16',
     'ADS1115_CONV_RATE_32',
@@ -47,23 +47,23 @@ final List<Todo> todos = [
     'ADS1115_CONV_RATE_475',
     'ADS1115_CONV_RATE_860',
   ]),
-  Todo(Function: "setMeasureMode", argfunction: <String>[
+  Todo(function: "setMeasureMode", argfunction: <String>[
     'ADS1115_MODE_CONTINUOUS',
     'ADS1115_MODE_SINGLE',
   ]),
-  Todo(Function: "setAlertLimit_V", argfunction: <String>[
+  Todo(function: "setAlertLimit_V", argfunction: <String>[
     'ADS1115_MAX_LIMIT',
     'ADS1115_WINDOW',
   ]),
-  Todo(Function: "setLatchMode", argfunction: <String>[
+  Todo(function: "setLatchMode", argfunction: <String>[
     'ADS1115_LATCH_DISABLED',
     'ADS1115_LATCH_ENABLED',
   ]),
-  Todo(Function: "setAlertPolarity", argfunction: <String>[
+  Todo(function: "setAlertPolarity", argfunction: <String>[
     'ADS1115_ACT_LOW',
     'ADS1115_ACT_HIGH',
   ]),
-  Todo(Function: "setAlertPinToConversionReady", argfunction: <String>[
+  Todo(function: "setAlertPinToConversionReady", argfunction: <String>[
     'yes',
     'no',
   ]),
