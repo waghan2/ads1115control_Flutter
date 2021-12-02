@@ -1,28 +1,26 @@
 
-<<<<<<< HEAD
-# Welcome advanture, this app is an copy of < ADS1115_WE.h> lib for ESP-32 implemented on flutter
+# Ads1x15 Control.
 
-### To do list
+Ads Control is an flutter app, wich comunicates with esp-32 via Bluetooth Serial.
 
-#### Implemento it with BLE -
+## To do list
+```
+Implemento it with BLE -
+Implement IOS code, actualy I could not test on Iphone
+Implement WebApplication
+Implement TODO new Functions, this is an idea to make a TODO so you can 
+implement a new function with yours argumments
+The ESP Code is not good yet, Im working on it, will be ready very soon
+```
+# Dependencies 
+``` 
+flutter_bluetooth_serial: 
+Install - $ flutter pub add flutter_bluetooth_serial
+import - import 'package:flutter_bluetooth_serial/flutter_bluetooth_serial.dart';
 
-#### Implement IOS code, actualy I could not test on Iphone
-
-#### Implement WebApplication
-
-#### Implement TODO new Functions, this is an idea to make a TODO so you can implement a new function with yours argumments
-
-### The ESP Code is not good yet, Im working on it, will be ready very soon
-=======
-
-# Welcome advanture, this app is an copy of < ADS1115_WE.h> lib for ESP-32 implemented on flutter. 
-
-### To do list.
-#### Implemento it with BLE -
-#### Implement IOS code, actualy I could not test on Iphone. 
-#### Implement WebApplication. 
-#### Implement TODO new Functions, this is an idea to make a TODO so you can implement a new function with yours argumments.
-### The ESP Code is not good yet, Im working on it, will be ready very soon.
+GetX.
+Install - flutter pub add get
+import - import 'package:get/get.dart';
 >>>>>>> a1978f0e4cad38e81023fa4e8ee92109285c0ede
 
 ## dependencies
@@ -48,6 +46,7 @@
 ## The functions implemented are in the datamap.dart, you can find more about this functions in ADS1115_WE.h
 =======
 ## The functions implemented are in the datamap.dart, you can find more about this functions in ADS1115_WE.h
+```
 final List<Todo> todos = [
   Todo(Function: "setVoltageRange_mV", argfunction: <String>[
     '256 mv',
@@ -175,7 +174,7 @@ final List<Todo> todos = [
     'yes',
     'no',
   ]),
-];
+];```
 
 For help getting started with Flutter, view our
 [online documentation](https://flutter.dev/docs), which offers tutorials,
