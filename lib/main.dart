@@ -67,8 +67,8 @@ class _HomeState extends State<Home> {
                       icon: const Icon(Icons.list))),
               ...todos.map(
                 (todos) => Funcoes(
-                  nomedafuncao: todos.nomedafuncao,
-                  argumento: todos.argdafuncao,
+                  nomedafuncao: todos.Function,
+                  argumento: todos.argfunction,
                 ),
               ),
             ],

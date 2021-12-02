@@ -705,8 +705,8 @@ class _ConectadoState extends State<Conectado> {
                   )),
               ...todos.map(
                 (todos) => Funcoes(
-                  nomedafuncao: todos.nomedafuncao,
-                  argumento: todos.argdafuncao,
+                  nomedafuncao: todos.Function,
+                  argumento: todos.argfunction,
                 ),
               ),
             ],
