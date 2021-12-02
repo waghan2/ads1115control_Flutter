@@ -15,13 +15,15 @@ The ESP Code is not good yet, Im working on it, will be ready very soon
 # Dependencies 
 ``` 
 flutter_bluetooth_serial: 
+
 Install - $ flutter pub add flutter_bluetooth_serial
 import - import 'package:flutter_bluetooth_serial/flutter_bluetooth_serial.dart';
 
 GetX.
+
 Install - flutter pub add get
 import - import 'package:get/get.dart';
->>>>>>> a1978f0e4cad38e81023fa4e8ee92109285c0ede
+
 ```
 ## dependencies
 
