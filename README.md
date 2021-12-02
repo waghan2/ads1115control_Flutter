@@ -22,7 +22,7 @@ GetX.
 Install - flutter pub add get
 import - import 'package:get/get.dart';
 >>>>>>> a1978f0e4cad38e81023fa4e8ee92109285c0ede
-
+```
 ## dependencies
 
 ### flutter_bluetooth_serial: ^0.4.0
